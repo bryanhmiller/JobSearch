@@ -14,7 +14,6 @@ namespace JobSearch.Models
         public Direction Direction { get; set; }
         public Method Method { get; set; }
         public string Details { get; set; }
-
     }
 
     public enum Direction
