@@ -22,5 +22,9 @@ namespace JobSearch.Models
         public System.Data.Entity.DbSet<JobSearch.Models.Communication> Communications { get; set; }
 
         public System.Data.Entity.DbSet<JobSearch.Models.ToDos> ToDos { get; set; }
+
+        public System.Data.Entity.DbSet<JobSearch.Models.Company> Companies { get; set; }
+
+        public System.Data.Entity.DbSet<JobSearch.Models.Applications> Applications { get; set; }
     }
 }

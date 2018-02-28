@@ -147,7 +147,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ApplicationsController.cs" />
     <Compile Include="Controllers\CommunicationsController.cs" />
+    <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ToDosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -160,6 +162,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Applications.cs" />
     <Compile Include="Models\Communication.cs" />
+    <Compile Include="Models\Company.cs" />
     <Compile Include="Models\JobSearchContext.cs" />
     <Compile Include="Models\ToDos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -211,6 +214,16 @@
     <Content Include="Views\ToDos\Details.cshtml" />
     <Content Include="Views\ToDos\Edit.cshtml" />
     <Content Include="Views\ToDos\Index.cshtml" />
+    <Content Include="Views\Companies\Create.cshtml" />
+    <Content Include="Views\Companies\Delete.cshtml" />
+    <Content Include="Views\Companies\Details.cshtml" />
+    <Content Include="Views\Companies\Edit.cshtml" />
+    <Content Include="Views\Companies\Index.cshtml" />
+    <Content Include="Views\Applications\Create.cshtml" />
+    <Content Include="Views\Applications\Delete.cshtml" />
+    <Content Include="Views\Applications\Details.cshtml" />
+    <Content Include="Views\Applications\Edit.cshtml" />
+    <Content Include="Views\Applications\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

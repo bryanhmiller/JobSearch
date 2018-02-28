@@ -9,7 +9,7 @@ namespace JobSearch.Models
     {
         public int Id { get; set; }
         public DateTime When { get; set; }
-        public string Company { get; set; }
+        public virtual Company Company { get; set; }
         public string Contact { get; set; }
         public Direction Direction { get; set; }
         public Method Method { get; set; }

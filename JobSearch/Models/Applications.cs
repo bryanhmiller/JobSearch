@@ -9,13 +9,23 @@ namespace JobSearch.Models
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
-        public 
+        public Stage Status { get; set; }
+        public Interest Interest { get; set; }
+        public virtual Company Company { get; set; }
     }
 
-    public enum Status
+    public enum Stage
     {
         Contacted,
         Applied,
-        Interview
+        Interviewed,
+        Offer
+    }
+
+    public enum Interest
+    {
+        Low,
+        Moderate,
+        High
     }
 }
