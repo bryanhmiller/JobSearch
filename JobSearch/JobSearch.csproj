@@ -159,6 +159,10 @@
     <Compile Include="Migrations\201802200155381_first migration.Designer.cs">
       <DependentUpon>201802200155381_first migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803270116355_companyModel.cs" />
+    <Compile Include="Migrations\201803270116355_companyModel.Designer.cs">
+      <DependentUpon>201803270116355_companyModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Applications.cs" />
     <Compile Include="Models\Communication.cs" />
@@ -246,6 +250,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201802200155381_first migration.resx">
       <DependentUpon>201802200155381_first migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803270116355_companyModel.resx">
+      <DependentUpon>201803270116355_companyModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -38,7 +38,11 @@
             @Html.DisplayFor(modelItem => item.When)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Company)
+            @foreach (var c in item.Company)
+            {
+                @c.Name
+            }
+            @*@Html.DisplayFor(modelItem => item.Company)*@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Contact)

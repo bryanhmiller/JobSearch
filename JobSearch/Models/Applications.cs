@@ -11,7 +11,7 @@ namespace JobSearch.Models
         public DateTime Date { get; set; }
         public Stage Status { get; set; }
         public Interest Interest { get; set; }
-        public virtual Company Company { get; set; }
+        public virtual List<Company> Company { get; set; }
     }
 
     public enum Stage
