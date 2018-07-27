@@ -38,6 +38,8 @@ namespace JobSearch.Controllers
         // GET: Communications/Create
         public ActionResult Create()
         {
+            ViewBag.Companies = new JobSearchContext().Companies.ToList().Select(x =>
+                new SelectListItem { Text = x.Name, Value = x.Id.ToString() });
             return View();
         }
 
@@ -46,6 +48,25 @@ namespace JobSearch.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public ActionResult Create(MakeNewCommunicationRequest communication)
+        {
+            if (ModelState.IsValid)
+            {
+                var newCommunication = new Communication
+                {
+                    JobTitle = communication.JobTitle,
+                    FirstName = communication.FirstName,
+                    LastName = communication.LastName,
+                    StartDate = communication.StartDate,
+                    Departments = db.Departments.Find(communication.DepartmentId)
+                };
+                db.Communications.Add(newCommunication);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(communication);
+        }
         public ActionResult Create([Bind(Include = "Id,When,Company,Contact,Direction,Method,Details")] Communication communication)
         {
             if (ModelState.IsValid)
